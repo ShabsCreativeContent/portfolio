@@ -1,0 +1,399 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  line-height: 26px;
+  color: #7f889d;
+  position: relative;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  background: #f5f6f7;
+  float: left;
+  width: 23%;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+}
+
+header form {
+  background: #eff1f2;
+  padding: 3rem 0px;
+}
+
+header form, header nav {
+  padding-left: 3.5rem;
+}
+
+form input {
+  color: #7f889d;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #dadfe1;
+  width: 90%;
+}
+
+header nav {
+  padding-top: 50px;
+}
+
+header nav, .prof, .prof1,  .prof ul, .prof2, .prof2 > section, .Projects, .service, .service + section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+nav h2, .service + section > h2, .service > h2 {
+  font-size: 2.5rem;
+  padding: 1rem 1.5rem 1rem 0px;
+  border-bottom: 3px solid #c41930;
+}
+
+nav h2, p > strong, .prof1 h1, .prof2 > section h4, .service + section > h2, .service > h2 {
+  color: #000000;
+}
+
+ul{
+  list-style: none;
+  padding: 0px;
+}
+
+nav ul {
+  width: 90%;
+}
+
+nav li {
+  padding: 20px 0px;
+  border-bottom: 1px solid #dadfe1;
+}
+
+nav a {
+  text-decoration: none;
+  color: #7f889d;
+}
+
+ul i {
+  padding-right: 7px;
+  color: #c41930;
+}
+
+ul + p {
+  margin-top: 80px;
+  font-size: 1.5rem;
+}
+
+.padLeft {
+  margin-left: 23%;
+  /* padding-left: 5%; */
+  padding-top: 30px;
+}
+
+header + section > i {
+  font-size: 3rem;
+  background: #eff1f2;
+  color: #c41930;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 5%;
+}
+
+main {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.prof, .prof1, .prof ul, .prof2, .prof2 > section, .Projects {
+  flex-direction: row;
+}
+
+.prof, .prof1, .prof2, .prof2 > section, .Projects {
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+
+.prof {
+  border-bottom: 5px solid #c41930;
+}
+
+.prof ul i {
+  padding-left: 1.6rem;
+  color: #7f889d;
+}
+
+.prof ul i:hover, .prof1 button:hover {
+  color: #c41930;
+}
+
+.prof1, .service, .service + section {
+  border-bottom: 3px solid #eff1f2;
+  padding: 100px 0px;
+}
+
+.prof1 > section {
+  width: 48%;
+  display: block;
+}
+
+.prof1 h1 {
+  font-size: 6rem;
+  line-height: 60px;
+}
+
+.prof1 button, .Projects button {
+  background: #fff;
+  padding: 15px 40px;
+  color: #c41930;
+  border: 1px solid #c41930;
+  border-radius: 5px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.prof1 button:hover, .Projects button:hover {
+  background: #c41930;
+  color: #fff;
+}
+
+#click {
+  background:  rgb(0, 124, 0);
+  color: #fff;
+  border-style: none;
+}
+
+#click {
+  display: none;
+}
+
+.hidden, .service1 {
+  display: none;
+}
+
+.prof1 .profPic{
+  height: 500px;
+  width: 100%;
+  background-image: url('https://pbs.twimg.com/media/Fq3_dioWwBEAKMw?format=jpg&name=small');
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 5px;
+}
+
+.service {
+  padding-top: 70px;
+}
+
+.prof2 {
+  margin-top: 50px;
+}
+
+.prof2 section {
+  width: 47%;
+  flex-flow: row;
+  padding-bottom: 20px;
+}
+
+.prof2 > section i {
+  font-size: 5rem;
+  padding-right: 50px;
+  color: #c41930;
+}
+
+.prof2 > section h4 {
+  margin: 0px;
+}
+
+.Projects {
+  justify-content: space-between;
+}
+
+.Projects > section {
+  /* height: 550px; */
+  width: 33.333%;
+  border: 1px solid rgb(120,136,157);
+  padding: 30px;
+}
+
+.Projects > .pBorder, .Projects > .pBorder1, .Projects > .pBorder2, .Projects > .pBorder3{
+  border-top: none;
+  border-left: none;
+}
+
+.Projects > .pBorder2, .Projects > .pBorder3 {
+  border-bottom: none;
+}
+
+.Projects > .pBorder1, .Projects > .pBorder3 {
+  border-right: none;
+}
+
+.Projects .img {
+  height: 200px;
+  width: 100%;
+  background: #eff1f2;
+}
+
+@media screen and (max-width: 1280px){
+  .info {
+    background: rgba(245,246,247, 0.9);
+    z-index: 20;
+    overflow: scroll;
+    width: 350px;
+  }
+
+  .info, .fa-bars {
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .infoButton {
+    display: none;
+  }
+
+  .padLeft {
+    position: relative;
+  }
+
+  .padLeft {
+    margin-left: 0px;
+  }
+
+  header + section > i {
+    position: sticky;
+    top: 3rem;
+    margin-left: 370px;
+    z-index: 20;
+  }
+
+  .faBars {
+    margin-left: 5%;
+  }
+
+  .Projects > section {
+    width: 50%;
+  }
+
+
+}
+
+@media screen and (max-width: 765px) {
+  .prof {
+    /* display: flex; */
+  }
+
+  .prof1, .padLeft {
+    position: relative;
+    padding-top: 50px;
+  }
+
+  .padLeft {
+    padding-top: 25px;
+  }
+
+  .prof1 > section, .prof2 > section {
+    width: 100%;
+  }
+
+  .profInfo {
+    padding-top: 500px;
+  }
+
+  .prof1 > section + section, .prof > .mediaIcon {
+    position: absolute;
+    top: 30px;
+  }
+
+  .prof > .mediaIcon {
+    right: 5%;
+  }
+
+  .Projects > section {
+    width: 100%;
+  }
+
+  .Projects > .pBorder, .Projects > .pBorder1, .Projects > .pBorder2, .Projects > .pBorder3{
+    border: none;
+    border-bottom: 1px solid rgb(120,136,157);
+  }
+
+  .Projects > .pBorder3 {
+    border-bottom: none;
+  }
+}
+
+@media screen and (max-width: 465px) {
+
+  header a {
+    font-size: 1.5rem;
+  }
+  header nav, header form {
+    padding-left: 20px;
+  }
+
+  .info {
+    width: 260px;
+  }
+
+  header + section > i {
+    margin-left: 280px;
+    font-size: 2rem;
+    color: #000000;
+  }
+
+  .profInfo {
+    padding-top: 300px;
+  }
+
+  .prof1 h1 {
+    font-size: 5rem;
+  }
+
+  #ready {
+    font-size: 1.8rem;
+  }
+
+  .prof1 p, .prof2 p, .Projects p {
+    font-size: 1.7rem;
+  }
+
+  .prof1 .profPic {
+    height: 300px;
+  }
+
+  .prof2 > section i {
+    font-size: 4rem;
+    padding-right: 20px;
+  }
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
